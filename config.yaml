@@ -1,0 +1,14 @@
+---
+system:
+  certificateFilePath: "{{config_dir}}/device.pem.crt"
+  privateKeyPath: "{{config_dir}}/private.pem.key"
+  rootCaPath: "{{config_dir}}/AmazonRootCA1.pem"
+  thingName: "ggsample2"
+services:
+  {{nucleus_component}}:
+    componentType: "NUCLEUS"
+    configuration:
+      awsRegion: "ap-south-1"
+      iotRoleAlias: "GreengrassV2TokenExchangeCoreDeviceRoleAlias"
+      iotDataEndpoint: "a12zxwrgxnnoko-ats.iot.ap-south-1.amazonaws.com"
+      iotCredEndpoint: "c35p5a9ws9lx2f.credentials.iot.ap-south-1.amazonaws.com"
